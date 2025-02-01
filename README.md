@@ -1,28 +1,53 @@
-![Context Mapper](https://raw.githubusercontent.com/wiki/ContextMapper/context-mapper-dsl/logo/cm-logo-github-small.png)
-# Context Mapper Demo for Online IDE 
-[![Build](https://github.com/ContextMapper/web-ide-demo/actions/workflows/build.yml/badge.svg)](https://github.com/ContextMapper/web-ide-demo/actions) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/ContextMapper/web-ide-demo) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# Entrega 001  Grupo 1: Diseño y Arquitectura de dominio
 
-Welcome to Context Mapper's demo repository. It illustrates how you can configure your own repository for the usage of Context Mapper in the online IDE [Gitpod](https://www.gitpod.io/).
+## Estructura del proyecto
 
-## Start Using Context Mapper Now
-Start the online IDE and use Context Mapper right now:
+     📂Perspicapps-No-Monoliticas/ 
+     ├── 📂src/main                    # Código fuente del proyecto
+     │   ├── 📂cml/                    # Archivos que representan los modelos de dominio en diferentes estados
+     │   │   ├── 📄 asIs.cml           # Representación del modelo de dominio en el estado actual (As-Is)
+     │   │   ├── 📄 domains.cml        # Definición de entidades, relaciones y reglas de negocio del sistema
+     │   │   └── 📄 toBe.cml           # Representación del modelo de dominio en el estado futuro deseado (To-Be)
+     ├── 📂images/                     # Directorio para almacenar imágenes y diagramas relacionados con el proyecto
+     |   ├── 📄 asIsEventStorming.png  # Diagrama de Event Storming que representa el modelo de dominio "As-Is"
+     |   ├── 📄 asIs_ContextMap.png    # Diagrama de Context Map que representa los límites del contexto "As-Is"
+     |   ├── 📄 toBeEventStorming.png  # Diagrama de Event Storming que representa el modelo de dominio "To-Be"
+     |   └── 📄 toBe_ContextMap.png    # Diagrama de Context Map que representa los límites del contexto "To-Be"
+     ├── 📄 .gitpod.yml                # Configuración del entorno de desarrollo en Gitpod
+     └── 📂README.md                   # Documentación principal del proyecto 
 
-<a href="https://gitpod.io/#https://github.com/ContextMapper/web-ide-demo" style="padding: 10px;">
-    <img src="https://gitpod.io/button/open-in-gitpod.svg" width="150" alt="Push" align="center">
-</a>
-<br/><br/>
+## Donde encontrar los fragmentos de código para cada item de calificación
+### Documentación de dominios y sub-dominios
+ * El alumno identificó y documentó correctamente todos los dominios y sub-dominios usando el DSL de ContextMapper
+     * [src/main/cml/domains.cml](https://github.com/Perspicapps-No-Monoliticas/Arquitectura/blob/main/src/main/cml/domains.cml)
+     ![image](https://github.com/user-attachments/assets/d44e7efb-2612-48b6-b361-7a4136968b26)
 
-## Open the Demo File
-In the folder `src/main/cml` you find a small **[CML demo](./src/main/cml/demo.cml)** (DDD sample application) where you can start to familiarize yourself with our DSL and our tools.
-You can find more info's about the tool and a complete documentation on our website [https://contextmapper.org/](https://contextmapper.org/).
+ * El alumno identificó y plasmó el vision statement para todos los dominios usando el DSL de ContextMapper
+     * [src/main/cml/domains.cml](https://github.com/Perspicapps-No-Monoliticas/Arquitectura/blob/main/src/main/cml/domains.cml)
+     * ![image](https://github.com/user-attachments/assets/2025b443-05aa-4670-b11e-d6d8fd18767b)
 
-## Create Your Own Context Mapping Repository
-You can simply fork this repository and click the button above to start the online IDE for your repo.
+ * El alumno identificó y documentó correctamente los tipos de sub-dominios usando el DSL de ContextMapper.
+     * [src/main/cml/domains.cml](https://github.com/Perspicapps-No-Monoliticas/Arquitectura/blob/main/src/main/cml/domains.cml)
+     * ![image](https://github.com/user-attachments/assets/a75ba21a-e9c5-4834-b539-016632d99085)
 
-## Useful Links
- 
- * [More example models](https://github.com/ContextMapper/context-mapper-examples)
- * [CML language reference](https://contextmapper.org/docs/language-reference/)
- * [Rapid prototyping tutorial](https://contextmapper.org/docs/rapid-ooad/)
- * [Architectural Refactorings](https://contextmapper.org/docs/architectural-refactorings/)
- * [Generators](https://contextmapper.org/docs/generators/)
+### Documentación del lenguaje ubicuo
+ * El alumno identificó y documentó correctamente todos los actores, eventos, comandos, modelo de lectura, sistemas externos y definiciones relevantes para el flujo de “anonimización, ingestión y enriquecimiento de datos” S-IS usando el método EventStorming.
+    * [images/asIsEventStorming.png](https://github.com/Perspicapps-No-Monoliticas/Arquitectura/blob/main/images/asIsEventStorming.png)
+    * ![image](https://github.com/user-attachments/assets/60b4dd4f-5318-4213-86ff-be27ad843fe5)
+ * El alumno identificó y documentó correctamente todos los actores, eventos, comandos, modelo de lectura, sistemas externos y definiciones relevantes para el flujo de “anonimización, ingestión y enriquecimiento de datos” TO-BE usando el método EventStorming.
+    *  [images/toBeEventStorming.png](https://github.com/Perspicapps-No-Monoliticas/Arquitectura/blob/main/images/toBeEventStorming.png)
+    *  ![image](https://github.com/user-attachments/assets/8db044fc-62f4-49eb-92f5-8b5faa4dcb44)
+
+### Documentación de contextos acotados
+ * El alumno identificó y documentó correctamente todos los contextos usando el DSL del ContextMapper para el AS-IS
+    *   [src/main/cml/asIs.cml](https://github.com/Perspicapps-No-Monoliticas/Arquitectura/blob/main/src/main/cml/asIs.cml)
+    *   ![image](https://github.com/user-attachments/assets/63fd22a0-d54a-40ce-aa55-17d2ed8b7e76)
+ * El alumno identificó y documentó correctamente todos los las relaciones y tipos de integración entre contextos usando el DSL del ContextMapper para el AS-IS
+    *   [src/main/cml/asIs.cml](https://github.com/Perspicapps-No-Monoliticas/Arquitectura/blob/main/src/main/cml/asIs.cml)
+    *   ![image](https://github.com/user-attachments/assets/029f498d-4b0d-47b0-951a-5c530b0a1313)
+*   El alumno identificó y documentó correctamente todos los contextos usando el DSL del ContextMapper para el TO-BE   
+    * [src/main/cml/toBe.cml](https://github.com/Perspicapps-No-Monoliticas/Arquitectura/blob/main/src/main/cml/toBe.cml)
+    * ![image](https://github.com/user-attachments/assets/8962a11d-f3dd-4fea-8b66-f2f3cf9879a8)
+*   El alumno identificó y documentó correctamente todos los las relaciones y tipos de integración entre contextos usando el DSL del ContextMapper para el TO-BE
+    * ![image](https://github.com/user-attachments/assets/589545f1-8e00-47f0-9e45-31b7262cd818)
+      
