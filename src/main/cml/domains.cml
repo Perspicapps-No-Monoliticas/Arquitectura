@@ -1,0 +1,55 @@
+Domain ProcesamientoYDistribucionDeDatosMedicos {
+    domainVisionStatement = "Adquisición, procesamiento, etiquetado y distribucion de datos médicos anonimizadas para IA y desarrolladores."
+
+  Subdomain Ingestion {
+        type = CORE_DOMAIN
+        domainVisionStatement = "Adquisición y consolidación de datos médicos de diferentes fuentes."
+    }
+
+    Subdomain Limpieza {
+        type = CORE_DOMAIN
+        domainVisionStatement =  "Limpieza y normalización de datos médicos."
+    }
+
+    Subdomain Canonizacion {
+        type = CORE_DOMAIN
+        domainVisionStatement = "Etiquetado y clasificación de datos médicos."
+    }
+
+    Subdomain InvestigacionYDesarrollo {
+        type = CORE_DOMAIN
+        domainVisionStatement = "Investigación y desarrollo de modelos de IA para anonimizar y clasificar datos médicos."
+    }
+
+    Subdomain DataPartnerships {
+        type = CORE_DOMAIN
+        domainVisionStatement = "Establecimiento de alianzas con proveedores de datos médicos."
+    }
+
+    Subdomain InteligenciaDeNegocios  {
+        type = SUPPORTING_DOMAIN
+        domainVisionStatement = "Análisis y generación de informes para la toma de decisiones estratégicas."
+    }
+
+    Subdomain ComercialYVentas {
+        type = GENERIC_SUBDOMAIN
+        domainVisionStatement = "Desarrollo de estrategias de comercialización y ventas."
+    }
+
+    Subdomain Seguridad {
+        type = SUPPORTING_DOMAIN
+        domainVisionStatement = "Implementación de medidas de seguridad para la protección de datos."
+    }
+
+    Subdomain SREyTI {
+        type = GENERIC_SUBDOMAIN
+        domainVisionStatement = "Gestión de la infraestructura y operaciones de TI."
+    }
+
+    Subdomain Auditoria {
+        type = SUPPORTING_DOMAIN
+        domainVisionStatement = "Auditoría y cumplimiento de normativas."
+    }
+
+}
+

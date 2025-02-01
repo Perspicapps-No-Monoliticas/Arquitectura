@@ -1,0 +1,62 @@
+import './domains.cml'
+
+BoundedContext ContextoIngestion implements Ingestion {
+}
+
+BoundedContext ContexoProcesamiento implements Limpieza, Canonizacion {
+}
+
+BoundedContext ContextoInvestigacion implements InvestigacionYDesarrollo {
+}
+
+BoundedContext ContextoComprasYVentas implements DataPartnerships, ComercialYVentas, InteligenciaDeNegocios {
+}
+
+BoundedContext ContextoAccesoADatos implements Seguridad, SREyTI {
+}
+
+BoundedContext ContextAuditoria implements  Auditoria {
+}
+
+ContextMap SaludTechDeLosAndes {
+    state = TO_BE
+    contains ContextoIngestion
+    contains ContexoProcesamiento
+    contains ContextoInvestigacion
+    contains ContextoComprasYVentas
+    contains ContextoAccesoADatos
+    contains ContextAuditoria
+
+    ContextoIngestion [U]-> [D, CF] ContexoProcesamiento
+
+    ContextoIngestion [U, OHS] -> [D] ContextoComprasYVentas
+
+    ContextoIngestion [U]-> [D, CF] ContextoInvestigacion
+
+    ContextoIngestion [D, CF]  <- [U] ContextoAccesoADatos
+
+    ContextoIngestion  [U] ->  [D, CF]  ContextAuditoria
+
+    ContexoProcesamiento [U, OHS] -> [D]  ContextoInvestigacion
+
+    ContexoProcesamiento [D, CF]  <- [U] ContextoAccesoADatos
+
+    ContexoProcesamiento  [U] ->  [D, CF] ContextAuditoria
+
+    ContextoComprasYVentas [U, OHS] -> [D] ContextoIngestion
+
+    ContextoComprasYVentas[D, CF]  <- [U] ContextoAccesoADatos
+
+    ContextoInvestigacion [U, OHS] -> [D] ContexoProcesamiento
+
+    ContextoInvestigacion [U, OHS] -> [D] ContextoComprasYVentas
+
+    ContextoInvestigacion [D, CF]  <- [U] ContextoAccesoADatos
+
+    ContextoInvestigacion  [U] ->  [D, CF] ContextAuditoria
+
+    ContextoAccesoADatos [U] ->  [D, CF]  ContextAuditoria
+
+    ContextAuditoria [U] ->  [D, CF]  ContextoAccesoADatos
+}
+

@@ -1,0 +1,34 @@
+import './domains.cml'
+
+BoundedContext ContextoProcesamiento implements Ingestion, Limpieza, Canonizacion, Auditoria {
+}
+
+BoundedContext ContextoInvestigacion implements InvestigacionYDesarrollo {
+}
+
+BoundedContext ContextoInteligenciaDeNegocios implements InteligenciaDeNegocios {
+}
+
+BoundedContext ContextoAccesoADatos implements Seguridad,SREyTI {
+}
+
+ContextMap SaludTechDeLosAndes {
+    state = AS_IS
+    contains ContextoProcesamiento
+    contains ContextoInvestigacion
+    contains ContextoInteligenciaDeNegocios
+    contains ContextoAccesoADatos
+
+    ContextoProcesamiento [P]<->[P] ContextoInteligenciaDeNegocios
+
+    ContextoProcesamiento [SK]<->[SK] ContextoInvestigacion
+
+    ContextoProcesamiento [D, CF] <-[U] ContextoAccesoADatos
+
+    ContextoInteligenciaDeNegocios [P]<->[P] ContextoInvestigacion
+
+    ContextoInteligenciaDeNegocios [D, CF] <-[U]   ContextoAccesoADatos
+
+    ContextoInvestigacion [D, CF] <-[U]   ContextoAccesoADatos
+}
+
