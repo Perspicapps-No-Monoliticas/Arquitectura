@@ -1,5 +1,22 @@
 # Entrega 001  Grupo 1: Diseño y Arquitectura de dominio
-
+## Instrucciones de uso
+ * Para intalar desde el ambiente local
+   * Instalar Java 8 o superior y agregar el JDK en la variable de entorno PATH
+   * Instalar la extensión [Context Mapper](https://marketplace.visualstudio.com/items?itemName=contextmapper.context-mapper-vscode-extension) para Visual Studio Code
+   * Instalar  [Graphviz](https://www.graphviz.org/)
+   * Abrir Visual Studio Code en la raiz del proyecto.
+   * Para generar los diagarmas abrir el .cml deaseado
+   * Presionar CTRL+Shit + p y buscar "Generate Graphical Context Map"
+   * Seleccionar el formato deseado PNG, SVG o DOT
+   * El diagrama será generado.
+  * Para usar desde gitPod
+       * Ingrese a https://perspicapps-arquitectur-zsdhjg07hqu.ws-us117.gitpod.io
+       * Seleccione su cuenta de GitHub junto con su repositorio.
+       * Una vez en la consola de gitPod
+       * Para generar los diagarmas abrir el .cml deaseado
+       * Presionar CTRL+Shit + p y buscar "Generate Graphical Context Map"
+       * Seleccionar el formato deseado PNG, SVG o DOT
+       * El diagrama será generado.
 ## Estructura del proyecto
 
      📂Perspicapps-No-Monoliticas/ 
